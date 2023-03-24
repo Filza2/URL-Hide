@@ -47,7 +47,7 @@ def url_check(url):
 
 def hide_url(website):
     header()
-    random_charts=''.join(random.choice('0ab1cd2ef3gh4ij5kl6mn7op8qr9st10uv0wx4yz1AB2C4DE0F05GHI4JKLM0NO4PQ0RSTU4VWXYZ') for _ in range(10))
+    random_chars=''.join(random.choice('0ab1cd2ef3gh4ij5kl6mn7op8qr9st10uv0wx4yz1AB2C4DE0F05GHI4JKLM0NO4PQ0RSTU4VWXYZ') for _ in range(10))
     url=input("- Enter The URL : ");header()
     link=short(url)
     if int(url_check(url))==0:exit('- Error, url not valid !\n')

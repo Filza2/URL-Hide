@@ -49,9 +49,9 @@ def hide_url(website):
     header()
     #random_chars=''.join(random.choice('0ab1cd2ef3gh4ij5kl6mn7op8qr9st10uv0wx4yz1AB2C4DE0F05GHI4JKLM0NO4PQ0RSTU4VWXYZ') for _ in range(10))
     url=input("- Enter The URL : ");header()
-    link=short(url)
     if int(url_check(url))==0:exit('- Error, url not valid !\n')
     else:
+        link=short(url)
         if link=='Error':exit('- Error !\n')
         else:
             if website in ['youtube','spotify','instagram','facebook']:
@@ -80,7 +80,7 @@ def Core():
 \nEnter The Number : '''))
     if website==1:hide_url('google')
     elif website==2:hide_url('youtube')
-    elif website==3:hide_url('Instagram')
+    elif website==3:hide_url('instagram')
     elif website==4:hide_url('Facebook')
     elif website==5:hide_url('Spotify')
     elif website==6:hide_url('nytimes')

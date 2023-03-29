@@ -49,21 +49,21 @@ def hide_url(website):
     header()
     random_chars=''.join(random.choice('0ab1cd2ef3gh4ij5kl6mn7op8qr9st10uv0wx4yz1AB2C4DE0F05GHI4JKLM0NO4PQ0RSTU4VWXYZ') for _ in range(10))
     url=input("- Enter The URL : ");header()
-    link=short(url)
     if int(url_check(url))==0:exit('- Error, url not valid !\n')
     else:
+        link=short(url)
         if link=='Error':exit('- Error !\n')
         else:
             if website in ['youtube','spotify','instagram','facebook']:
                 if website in ['youtube','spotify']:sub='video'
                 elif website=='instagram':sub='photo'
                 elif website=='facebook':sub='profile'
-                print(f"- Your URL is : https://www.{website}.com-{sub}-{random_charts}@{link}")
+                print(f"- Your URL is : https://www.{website}.com-{sub}-{random_chars}@{link}")
             elif website in ['google','nytimes','github']:
                 if website=='github':
-                    print(f"- Your URL is : https://{website}.com-{random_charts}@{link}")
+                    print(f"- Your URL is : https://{website}.com@{link}")
                 else:
-                    print(f"- Your URL is : https://www.{website}.com-{random_charts}@{link}")
+                    print(f"- Your URL is : https://www.{website}.com@{link}")
             else:
                 exit(404)
 
@@ -80,7 +80,7 @@ def Core():
 \nEnter The Number : '''))
     if website==1:hide_url('google')
     elif website==2:hide_url('youtube')
-    elif website==3:hide_url('Instagram')
+    elif website==3:hide_url('instagram')
     elif website==4:hide_url('Facebook')
     elif website==5:hide_url('Spotify')
     elif website==6:hide_url('nytimes')
